@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations: {}
+  labels:
+    workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
+  name: randomrecipe
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
+  template:
+    metadata:
+      labels:
+        workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
+    spec:
+      containers:
+      - image: test21343124
+        imagePullPolicy: Always
+        name: container-0
+        ports:
+        - containerPort: 80
+          name: test
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

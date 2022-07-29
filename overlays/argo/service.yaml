@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: port-example-svc
+spec:
+  # Make the service externally visible via the node
+  type: NodePort 
+  selector:
+    workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
+  ports:
+    # Which port on the node is the service available through?
+    - nodePort: 31000
+      port: 80
+      targetPort: 80

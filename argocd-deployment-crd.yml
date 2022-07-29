@@ -1,0 +1,14 @@
+project: default
+source:
+  repoURL: 'https://github.com/MarkusDHS/rrenv'
+  path: /overlays/argo
+  targetRevision: main
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: randomrecipe
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
