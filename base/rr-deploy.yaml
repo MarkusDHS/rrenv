@@ -16,7 +16,7 @@ spec:
         workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
     spec:
       containers:
-      - image: test21343124
+      - image: markusdhs/prodrandomrecipe:18fe959241373ac7d44d3fd7fb9ab87c829686e1
         imagePullPolicy: Always
         name: container-0
         ports:
