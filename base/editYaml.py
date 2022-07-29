@@ -1,7 +1,6 @@
 import sys
 import os
 
-# In Anlehung an https://stackoverflow.com/questions/29518833/editing-yaml-file-by-python
 
 if __name__ == '__main__':
     newImage=sys.argv[1]
