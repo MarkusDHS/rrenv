@@ -2,7 +2,5 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: randomrecipe
-  labels:
-    test:foo
 spec:
-  replicas: 5
+  replicas: 3

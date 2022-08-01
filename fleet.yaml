@@ -1,0 +1,17 @@
+defaultNamespace: rrfleet
+namespace: rrfleet
+kustomize:
+  dir: ./base 
+
+targetCustomizations:
+ - name: prod
+   clusterGroup: dscclusters
+   kustomize:
+     dir: overlays/fleet
+
+
+
+
+
+
+
