@@ -1,5 +1,5 @@
-defaultNamespace: rrfleet
-namespace: rrfleet
+defaultNamespace: rrfleet2
+namespace: rrfleet2
 kustomize:
   dir: ./base 
 
