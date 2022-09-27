@@ -9,6 +9,6 @@ spec:
     workload.user.cattle.io/workloadselector: apps.deployment-default-randomrecipe
   ports:
     # Which port on the node is the service available through?
-    - nodePort: 31001
+    - nodePort: 31005
       port: 80
       targetPort: 80
